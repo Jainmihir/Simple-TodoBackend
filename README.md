@@ -42,13 +42,8 @@ This is a simple Todo application with authentication built with Node.js, Expres
    ```bash
    npm start
    ```
-
-## PostMan Collection
-```
-   Link : " "
-```
-
-## API Endpoints
+   
+## API'S :-
 
 ### Auth
 
