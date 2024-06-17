@@ -1,23 +1,24 @@
 # Todo App
 
-This is a simple Todo application with authentication built with Node.js, Express, and MongoDB.
+This is a simple Todo application with authentication built with Node.js, Express, and MongoDB. 
 
 ## Features
 
-- User registration and login
+- It have User registration and login
 - JWT authentication
-- CRUD operations for todos
+- All the CRUD operations for todos
+- You can Pin/unpin todos
 - Pagination for listing todos
 - Search todos by title
-- Pin/unpin todos
+
 
 ## Installation
 
 1. Clone the repository
 
-   ```bash
-   git clone https://github.com/yourusername/todo-app.git
-   cd todo-app
+   ```Terminal
+   git clone https://github.com/Jainmihir/Simple-TodoBackend.git
+   cd Simple-TodoBackend
    ```
 
 2. Install dependencies
@@ -29,32 +30,38 @@ This is a simple Todo application with authentication built with Node.js, Expres
 3. Set up environment variables
 
    ```bash
-   cp .env.example .env
+   touch .env | right-click to create .env
    ```
 
-4. Run the server
+4. You generate this Jwt Authentication with the help of this command 
+   ```
+      node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
+   ```
+
+5. Run the server
    ```bash
    npm start
    ```
+
+## PostMan Collection
+```
+   Link : " "
+```
 
 ## API Endpoints
 
 ### Auth
 
-- `POST /api/auth/register` - Register a new user
-- `POST /api/auth/login` - Login a user
+- `POST /api/auth/register` - Registration a new User/Client
+- `POST /api/auth/login` - Login a user/Client with credentials
 
 ### Todos
 
-- `POST /api/todos` - Create a new todo (requires authentication)
-- `GET /api/todos` - Get all todos (requires authentication)
-- `GET /api/todos/search` - Search todos by title (requires authentication)
-- `GET /api/todos/:id` - Get a todo by ID (requires authentication)
-- `PUT /api/todos/:id` - Update a todo by ID (requires authentication)
-- `DELETE /api/todos/:id` - Delete a todo by ID (requires authentication)
+- All Routes are require for authentication first
+- `POST /api/todos` - Create a new todo 
+- `GET /api/todos` - Get all todos
+- `GET /api/todos/search` - Search todos by title
+- `GET /api/todos/:id` - Get a todo by ID 
+- `PUT /api/todos/:id` - Update a todo by ID
+- `DELETE /api/todos/:id` - Delete a todo by ID
 
-## Postman Collection
-
-You can import the Postman collection from the following link:
-
-[Postman Collection](https://techforensics.postman.co/workspace/My-Workspace~37e59789-aafa-4572-844b-b5529a209c24/collection/32230196-ea9f03e5-ab39-4fb2-9151-54c59d2e17e1?action=share&creator=32230196)
